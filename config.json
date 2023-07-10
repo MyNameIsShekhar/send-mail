@@ -1,0 +1,17 @@
+{
+  "email": {
+    "service": "email",
+    "host": "smtp.example.com",
+    "port": 587,
+    "secure": false,
+    "recipient": "your-email@example.com",
+    "auth": {
+      "user": "your-email@example.com",
+      "pass": "your-password"
+    }
+  },
+  "path": {
+    "notFound": "/path/to/404.html",
+    "messageSent": "/path/to/message_sent.html"
+  }
+}
