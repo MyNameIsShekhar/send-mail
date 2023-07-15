@@ -20,6 +20,11 @@ app.post('/send_message', (req, res) => {
     return res.status(400).send('Missing required fields');
   }
 
+  // Check for bots using honeypot fields
+  if (req.body.subject) {
+    return res.status(403).send('Access Denied')
+  }
+
   // Sanitize inputs
   const sanitizedName = sanitizeHtml(name);
   const sanitizedEmail = sanitizeHtml(email);
